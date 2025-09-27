@@ -9,6 +9,7 @@ radius = 87.05171
 
 [node name="spotLight" type="Node2D"]
 script = ExtResource("1_45aau")
+mouseSpeed = 6.265
 
 [node name="Area2D" type="Area2D" parent="."]
 
