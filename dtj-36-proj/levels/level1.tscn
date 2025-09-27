@@ -5,7 +5,7 @@
 [node name="Level1" type="Node2D"]
 
 [node name="platform" parent="." instance=ExtResource("1_jwv3a")]
-position = Vector2(1, 581)
+position = Vector2(1, 222)
 defaultState = true
 
 [node name="platform2" parent="." instance=ExtResource("1_jwv3a")]

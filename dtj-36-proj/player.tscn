@@ -14,8 +14,8 @@ JUMP_VELOCITY = -600.0
 maxSpeed = 300
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0, -7.1525574e-07)
-scale = Vector2(19.999998, 20)
+position = Vector2(0, -21.999998)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_onrkg")
 hframes = 2
 vframes = 2
