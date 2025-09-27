@@ -9,7 +9,10 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += gravMult*get_gravity() * delta
-
+	if abs(velocity.x) > 1:
+		$AnimationPlayer.play("run")
+	else:
+		$AnimationPlayer.play("idle")
 	if position.y > get_viewport().size.y:
 		get_tree().change_scene_to_file("res://menu.tscn")
 		return
@@ -21,6 +24,10 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("lt", "rt")
+	if direction>0:
+		$Sprite2D.flip_h = false
+	elif direction <0:
+		$Sprite2D.flip_h = true
 	if abs(velocity.x)<maxSpeed:
 		if direction:
 			velocity.x += direction * SPEED

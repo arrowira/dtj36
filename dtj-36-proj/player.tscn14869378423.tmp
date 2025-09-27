@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://5tqpows1qqfn"]
+[gd_scene load_steps=7 format=3 uid="uid://5tqpows1qqfn"]
 
 [ext_resource type="Script" uid="uid://3xbdaj8p2576" path="res://playerBehaviour.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://8ynl2ihr6c7n" path="res://player.png" id="2_onrkg"]
@@ -38,26 +38,9 @@ tracks/0/keys = {
 "values": [1]
 }
 
-[sub_resource type="Animation" id="Animation_hqtel"]
-resource_name = "idle"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hqtel"]
 _data = {
 &"RESET": SubResource("Animation_i3pqv"),
-&"idle": SubResource("Animation_hqtel"),
 &"run": SubResource("Animation_onrkg")
 }
 
@@ -67,6 +50,7 @@ scale = Vector2(0.6, 0.6)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_4flbx")
 SPEED = 10.0
+gravMult = null
 JUMP_VELOCITY = -400.0
 maxSpeed = 150
 
