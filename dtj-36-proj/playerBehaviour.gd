@@ -10,6 +10,10 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += gravMult*get_gravity() * delta
 
+	if position.y > get_viewport().size.y:
+		get_tree().change_scene_to_file("res://menu.tscn")
+		return
+
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
