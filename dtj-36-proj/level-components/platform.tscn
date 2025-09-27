@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxy4eho7vpplf"]
 
-[ext_resource type="Texture2D" uid="uid://qmm8erppjp6p" path="res://popBlockMedium.png" id="1_846sf"]
+[ext_resource type="Texture2D" uid="uid://bx61s07ufxmfs" path="res://popBlockMed.png" id="1_846sf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
 size = Vector2(256.5, 66)
@@ -14,5 +14,6 @@ texture = ExtResource("1_846sf")
 vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(127.75, 31)
 shape = SubResource("RectangleShape2D_ig7tw")
