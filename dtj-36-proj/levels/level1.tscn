@@ -6,6 +6,7 @@
 
 [node name="platform" parent="." instance=ExtResource("1_jwv3a")]
 position = Vector2(1, 581)
+defaultState = true
 
 [node name="platform2" parent="." instance=ExtResource("1_jwv3a")]
 position = Vector2(314, 542)
