@@ -4,21 +4,24 @@
 [ext_resource type="Texture2D" uid="uid://8ynl2ihr6c7n" path="res://player.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(21.666666, 20)
 
 [node name="player" type="Node2D"]
+scale = Vector2(0.6, 0.6)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_4flbx")
-SPEED = 20.0
-JUMP_VELOCITY = -600.0
-maxSpeed = 300
+SPEED = 10.0
+JUMP_VELOCITY = -400.0
+maxSpeed = 150
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0, -21.999998)
+position = Vector2(0, -21.666664)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_onrkg")
 hframes = 2
 vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(2.4999995, 0)
 shape = SubResource("RectangleShape2D_i3pqv")

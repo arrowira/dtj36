@@ -21,8 +21,8 @@ nextLevel="*res://next_level.gd"
 
 [display]
 
-window/size/viewport_width=500
-window/size/viewport_height=300
+window/size/viewport_width=400
+window/size/viewport_height=250
 window/stretch/mode="viewport"
 
 [input]

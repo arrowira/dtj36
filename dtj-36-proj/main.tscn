@@ -7,7 +7,7 @@
 [node name="main" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(32, 132)
+position = Vector2(32, 26)
 
 [node name="spotLight" parent="." instance=ExtResource("2_0xm2m")]
 modulate = Color(1, 1, 1, 0.42745098)

@@ -5,19 +5,14 @@
 [node name="Level1" type="Node2D"]
 
 [node name="platform" parent="." instance=ExtResource("1_jwv3a")]
-position = Vector2(1, 222)
+position = Vector2(5, 215)
 defaultState = true
 
 [node name="platform2" parent="." instance=ExtResource("1_jwv3a")]
-position = Vector2(314, 542)
+position = Vector2(99, 186)
 
 [node name="platform3" parent="." instance=ExtResource("1_jwv3a")]
-position = Vector2(627, 506)
-scale = Vector2(0.452, 1.344)
-
-[node name="platform5" parent="." instance=ExtResource("1_jwv3a")]
-position = Vector2(759, 450)
-scale = Vector2(0.48934978, 1.1956714)
+position = Vector2(202, 185)
 
 [node name="platform4" parent="." instance=ExtResource("1_jwv3a")]
-position = Vector2(898, 386)
+position = Vector2(291, 166)
