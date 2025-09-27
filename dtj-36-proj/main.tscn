@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1updismjircn"]
+
+[ext_resource type="PackedScene" uid="uid://5tqpows1qqfn" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://v4ilviyh6btm" path="res://spot_light.tscn" id="2_0xm2m"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7dm0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(396, 11)
+
+[node name="main" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(14, 518)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(197.24998, 3.75)
+scale = Vector2(395.49997, 8.5)
+texture = SubResource("CanvasTexture_7dm0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(197, 4.5)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="player" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(32, 132)
+
+[node name="spotLight" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(585, 317)
