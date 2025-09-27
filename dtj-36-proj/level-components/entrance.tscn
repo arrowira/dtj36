@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh7ji8bs1kgpd"]
+
+[ext_resource type="Texture2D" uid="uid://bnosv2orj4ft8" path="res://level-components/door-1.png_720.png" id="1_oi137"]
+
+[node name="Entrance" type="Node2D"]
+
+[node name="Door1_png720" type="Sprite2D" parent="."]
+position = Vector2(-2, -358)
+texture = ExtResource("1_oi137")
