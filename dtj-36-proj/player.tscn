@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://5tqpows1qqfn"]
 
 [ext_resource type="Script" uid="uid://3xbdaj8p2576" path="res://playerBehaviour.gd" id="1_4flbx"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_onrkg"]
+[ext_resource type="Texture2D" uid="uid://8ynl2ihr6c7n" path="res://player.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 
@@ -17,7 +16,9 @@ maxSpeed = 300
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(0, -7.1525574e-07)
 scale = Vector2(19.999998, 20)
-texture = SubResource("CanvasTexture_onrkg")
+texture = ExtResource("2_onrkg")
+hframes = 2
+vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_i3pqv")

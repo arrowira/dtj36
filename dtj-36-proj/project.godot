@@ -21,7 +21,9 @@ nextLevel="*res://next_level.gd"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/size/viewport_width=500
+window/size/viewport_height=300
+window/stretch/mode="viewport"
 
 [input]
 
@@ -46,4 +48,5 @@ rt={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_clear_color=Color(0.37699667, 0.30008575, 0.43776444, 1)
