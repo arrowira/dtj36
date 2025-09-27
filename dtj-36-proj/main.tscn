@@ -15,3 +15,12 @@ position = Vector2(585, 317)
 
 [node name="levelLoader" type="Node2D" parent="."]
 script = ExtResource("3_h2yge")
+
+[node name="hud" type="CanvasLayer" parent="."]
+
+[node name="levelNumber" type="Label" parent="hud"]
+offset_left = 25.0
+offset_top = 26.0
+offset_right = 178.0
+offset_bottom = 89.0
+text = "Level #"
