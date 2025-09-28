@@ -23,5 +23,3 @@ position = Vector2(32, 26)
 
 [node name="spotLight" parent="." instance=ExtResource("2_0xm2m")]
 modulate = Color(1, 1, 1, 0.42745098)
-position = Vector2(585, 317)
-scale = Vector2(0.49, 0.49)
