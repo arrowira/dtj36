@@ -8,8 +8,8 @@ func _ready() -> void:
 	ll.get_material().set_shader_parameter("innerRad", r)
 
 	var mousePosNode = get_node('mousePos')
-	var fudge = .72 # get the collision area to align with the spot
-	mousePosNode.scale = Vector2(r, r) * 400 * fudge
+	var fudge = 1.02 # get the collision area to align with the spot
+	mousePosNode.scale = Vector2(r, r) * 250 * fudge
 
 	var obj = get_parent().find_child("Entrance")
 	print('objp ', get_parent())
