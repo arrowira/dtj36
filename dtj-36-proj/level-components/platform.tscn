@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxy4eho7vpplf"]
+[gd_scene load_steps=6 format=3 uid="uid://cxy4eho7vpplf"]
 
 [ext_resource type="Texture2D" uid="uid://bx61s07ufxmfs" path="res://popBlockMed.png" id="1_846sf"]
 [ext_resource type="Script" uid="uid://bln2vyomnkx7c" path="res://level-components/platform.gd" id="1_h8ru0"]
+[ext_resource type="AudioStream" uid="uid://c8fxahteexcdy" path="res://blockPopSound.mp3" id="3_edvyl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
 size = Vector2(256.5, 66)
@@ -28,6 +29,9 @@ shape = SubResource("RectangleShape2D_ig7tw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(127, 36)
 shape = SubResource("RectangleShape2D_edvyl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_edvyl")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

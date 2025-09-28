@@ -16,10 +16,12 @@ func _physics_process(delta: float) -> void:
 		
 	if position.y > get_viewport().size.y:
 		get_tree().change_scene_to_file("res://menu.tscn")
+		$hurtSFX.play()
 		return
 
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
+		$jumpSFX.play()
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.

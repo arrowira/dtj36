@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://5tqpows1qqfn"]
+[gd_scene load_steps=10 format=3 uid="uid://5tqpows1qqfn"]
 
 [ext_resource type="Script" uid="uid://3xbdaj8p2576" path="res://playerBehaviour.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://8ynl2ihr6c7n" path="res://player.png" id="2_onrkg"]
+[ext_resource type="AudioStream" uid="uid://doex1db1utjme" path="res://jump.wav" id="3_hqtel"]
+[ext_resource type="AudioStream" uid="uid://b1sj3e2vgf5bc" path="res://hitHurt.wav" id="4_sweqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(21.666666, 20)
@@ -86,3 +88,9 @@ shape = SubResource("RectangleShape2D_i3pqv")
 libraries = {
 &"": SubResource("AnimationLibrary_hqtel")
 }
+
+[node name="jumpSFX" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("3_hqtel")
+
+[node name="hurtSFX" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("4_sweqy")
