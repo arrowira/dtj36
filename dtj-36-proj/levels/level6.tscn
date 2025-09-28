@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cejmve6ryoyvp"]
+
+[ext_resource type="PackedScene" uid="uid://dh7ji8bs1kgpd" path="res://level-components/entrance.tscn" id="1_hydfx"]
+[ext_resource type="PackedScene" uid="uid://bg6eitetkox37" path="res://level-components/exit.tscn" id="2_s216a"]
+[ext_resource type="PackedScene" uid="uid://cxy4eho7vpplf" path="res://level-components/platformMed.tscn" id="3_bufqw"]
+[ext_resource type="PackedScene" uid="uid://5vmyk337etpo" path="res://level-components/platformSmall.tscn" id="4_s216a"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="Entrance" parent="." instance=ExtResource("1_hydfx")]
+position = Vector2(55, 178)
+
+[node name="Exit" parent="." instance=ExtResource("2_s216a")]
+position = Vector2(339, 133)
+
+[node name="platform4" parent="Exit" instance=ExtResource("3_bufqw")]
+position = Vector2(-112.44983, 8)
+scale = Vector2(1.004016, 0.99999994)
+
+[node name="platform" parent="." instance=ExtResource("4_s216a")]
+position = Vector2(142, 184)
+
+[node name="platform2" parent="." instance=ExtResource("4_s216a")]
+position = Vector2(233, 166)
+
+[node name="platform3" parent="." instance=ExtResource("3_bufqw")]
+position = Vector2(209, 108)
+rotation = 1.5707774

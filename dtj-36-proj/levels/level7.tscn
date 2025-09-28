@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwnl6kwslpbi3"]
+
+[ext_resource type="PackedScene" uid="uid://dh7ji8bs1kgpd" path="res://level-components/entrance.tscn" id="1_j0g86"]
+[ext_resource type="PackedScene" uid="uid://bg6eitetkox37" path="res://level-components/exit.tscn" id="2_iqepm"]
+[ext_resource type="PackedScene" uid="uid://cxy4eho7vpplf" path="res://level-components/platformMed.tscn" id="3_5jh5v"]
+[ext_resource type="PackedScene" uid="uid://gxtn3sxxjx2f" path="res://level-components/spinner.tscn" id="4_iqepm"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="Entrance" parent="." instance=ExtResource("1_j0g86")]
+position = Vector2(180, 238)
+
+[node name="Exit" parent="." instance=ExtResource("2_iqepm")]
+position = Vector2(176.00005, 99)
+
+[node name="platform4" parent="Exit" instance=ExtResource("3_5jh5v")]
+position = Vector2(-112.44983, 8)
+scale = Vector2(1.004016, 0.99999994)
+
+[node name="platform" parent="." instance=ExtResource("3_5jh5v")]
+position = Vector2(216, 220)
+
+[node name="platform2" parent="." instance=ExtResource("3_5jh5v")]
+position = Vector2(315, 197)
+
+[node name="platform3" parent="." instance=ExtResource("3_5jh5v")]
+position = Vector2(216, 174)
+
+[node name="platform4" parent="." instance=ExtResource("3_5jh5v")]
+position = Vector2(315, 151)
+
+[node name="platform5" parent="." instance=ExtResource("3_5jh5v")]
+position = Vector2(216, 128)
+
+[node name="spinner" parent="." instance=ExtResource("4_iqepm")]
+position = Vector2(243, 76)
+
+[node name="spinner2" parent="." instance=ExtResource("4_iqepm")]
+position = Vector2(298, 179)

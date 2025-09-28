@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjyqyo21mgun5"]
+
+[ext_resource type="PackedScene" uid="uid://dh7ji8bs1kgpd" path="res://level-components/entrance.tscn" id="1_6xkyh"]
+[ext_resource type="PackedScene" uid="uid://btnh2nqjcbqf7" path="res://level-components/platformBig.tscn" id="2_6xkyh"]
+[ext_resource type="PackedScene" uid="uid://5vmyk337etpo" path="res://level-components/platformSmall.tscn" id="3_8cf2o"]
+[ext_resource type="FontFile" uid="uid://edfjahup78ih" path="res://BoldPixels.ttf" id="4_8cf2o"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="Entrance" parent="." instance=ExtResource("1_6xkyh")]
+position = Vector2(55, 178)
+
+[node name="platform" parent="." instance=ExtResource("2_6xkyh")]
+position = Vector2(155, 200)
+
+[node name="platform2" parent="." instance=ExtResource("3_8cf2o")]
+position = Vector2(285, 165)
+
+[node name="platform3" parent="." instance=ExtResource("3_8cf2o")]
+position = Vector2(347, 136)
+
+[node name="platform4" parent="." instance=ExtResource("3_8cf2o")]
+position = Vector2(288, 112)
+
+[node name="platform5" parent="." instance=ExtResource("3_8cf2o")]
+position = Vector2(224, 91)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="platform5"]
+offset_left = -364.0
+offset_top = 328.0
+offset_right = 280.0
+offset_bottom = 464.0
+theme_override_fonts/normal_font = ExtResource("4_8cf2o")
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[rainbow][wave]Thanks for playing"
