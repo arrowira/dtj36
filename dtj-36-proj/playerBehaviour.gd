@@ -15,9 +15,11 @@ func _physics_process(delta: float) -> void:
 		$AnimationPlayer.play("idle")
 		
 	if position.y > get_viewport().size.y:
-		get_tree().change_scene_to_file("res://menu.tscn")
-		$hurtSFX.play()
-		return
+		var timer  = get_node('/root/main/drown')
+		if timer.is_stopped():
+			$hurtSFX.play()
+			timer.start()
+			return
 
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
