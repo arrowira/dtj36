@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://driluvnp1ugy4" path="res://spot_light.gd" id="1_45aau"]
 [ext_resource type="Texture2D" uid="uid://dqa3ylj8j8re6" path="res://light1.png" id="2_b7ip3"]
-[ext_resource type="Shader" path="res://spot_light2.gdshader" id="2_swd6l"]
+[ext_resource type="Shader" uid="uid://coafuu2av52m3" path="res://spot_light2.gdshader" id="2_swd6l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_swd6l"]
 shader = ExtResource("2_swd6l")
@@ -25,6 +25,7 @@ texture = ExtResource("2_b7ip3")
 centered = false
 
 [node name="mousePos" type="Node2D" parent="."]
+position = Vector2(66, 66)
 
 [node name="Area2D" type="Area2D" parent="mousePos"]
 

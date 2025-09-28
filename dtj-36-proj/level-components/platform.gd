@@ -12,14 +12,14 @@ func _ready() -> void:
 	$Collision.set_deferred("disabled", !defaultState)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.get_parent().name == "spotLight":
+	if area.get_parent().name == "mousePos":
 		$AudioStreamPlayer.play()
 		$Sprite2D.frame=poppedFrame
 		$Collision.set_deferred("disabled", false)
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
-	if area.get_parent().name == "spotLight":
+	if area.get_parent().name == "mousePos":
 		print("exited")
 		$Collision.set_deferred("disabled", !defaultState)
 		if defaultState == true:
