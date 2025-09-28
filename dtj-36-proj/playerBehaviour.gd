@@ -13,6 +13,7 @@ func _physics_process(delta: float) -> void:
 		$AnimationPlayer.play("run")
 	else:
 		$AnimationPlayer.play("idle")
+		
 	if position.y > get_viewport().size.y:
 		get_tree().change_scene_to_file("res://menu.tscn")
 		return
