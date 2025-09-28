@@ -6,9 +6,6 @@
 
 [node name="Level2" type="Node2D"]
 
-[node name="platform" parent="." instance=ExtResource("1_raxm7")]
-position = Vector2(14, 140)
-
 [node name="platform2" parent="." instance=ExtResource("1_raxm7")]
 position = Vector2(84, 139)
 
@@ -19,7 +16,7 @@ position = Vector2(160, 139)
 position = Vector2(243, 138)
 
 [node name="Entrance" parent="." instance=ExtResource("2_qyb5k")]
-position = Vector2(47, 121)
+position = Vector2(41, 139)
 
 [node name="Exit" parent="." instance=ExtResource("3_py88r")]
 position = Vector2(269.00006, 133)
