@@ -6,13 +6,18 @@ void vertex() {
 uniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_nearest;
 
 void fragment() {
+	float darkScale = .5;
+	float lightDial = .5;
+	vec4 lightBoost = vec4(.2,.2,.2,.2);
+	float innerRad = .004;
+	float outerRad = .005;
+	
 	vec4 prev = textureLod(screen_texture, SCREEN_UV, 0.0);
-	vec4 dark = prev *vec4(0.,0.,0.,.7);
-	vec4 light = prev*vec4(1.,1.,1.,.5)+vec4(.2,.2,.2,.2);
-	//dark = vec4(1,0,0,1);light=vec4(0,1,0,1);
+	vec4 dark = prev * vec4(0.,0.,0.,darkScale);
+	vec4 light = prev * vec4(1.,1.,1.,lightDial) + lightBoost;
 	float d = distance(UV, vec2(.50,.50));
-	float d2 = smoothstep(.005,.002,d);
-    COLOR = mix(dark,  light, d2);
+	float dCurved = smoothstep(outerRad, innerRad, d);
+    COLOR = mix(dark, light, dCurved);
 }
 
 //void light() {
