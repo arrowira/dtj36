@@ -1,23 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://v4ilviyh6btm"]
+[gd_scene load_steps=6 format=3 uid="uid://v4ilviyh6btm"]
 
 [ext_resource type="Script" uid="uid://driluvnp1ugy4" path="res://spot_light.gd" id="1_45aau"]
+[ext_resource type="Texture2D" uid="uid://dqa3ylj8j8re6" path="res://light1.png" id="2_b7ip3"]
+[ext_resource type="Shader" uid="uid://coafuu2av52m3" path="res://spot_light2.gdshader" id="2_swd6l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_swd6l"]
+shader = ExtResource("2_swd6l")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b7ip3"]
 radius = 87.05171
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_swd6l"]
 
 [node name="spotLight" type="Node2D"]
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_45aau")
 mouseSpeed = 6.265
 
+[node name="Light1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_swd6l")
+position = Vector2(-4.0000305, -12)
+scale = Vector2(15.297, 16)
+texture = ExtResource("2_b7ip3")
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_b7ip3")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.9999962, -4.499996)
-scale = Vector2(159.99998, 149)
-texture = SubResource("CanvasTexture_swd6l")
