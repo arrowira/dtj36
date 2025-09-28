@@ -91,6 +91,7 @@ libraries = {
 
 [node name="jumpSFX" type="AudioStreamPlayer" parent="CharacterBody2D"]
 stream = ExtResource("3_hqtel")
+volume_db = -9.2
 
 [node name="hurtSFX" type="AudioStreamPlayer" parent="CharacterBody2D"]
 stream = ExtResource("4_sweqy")
