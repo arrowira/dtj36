@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cxy4eho7vpplf"]
 
-[ext_resource type="Texture2D" uid="uid://bx61s07ufxmfs" path="res://popBlockMed.png" id="1_846sf"]
-[ext_resource type="Script" uid="uid://bln2vyomnkx7c" path="res://level-components/platform.gd" id="1_h8ru0"]
-[ext_resource type="AudioStream" uid="uid://c8fxahteexcdy" path="res://blockPopSound.mp3" id="3_edvyl"]
+[ext_resource type="Script" uid="uid://bln2vyomnkx7c" path="res://level-components/platform.gd" id="1_o8tyn"]
+[ext_resource type="Texture2D" uid="uid://hoj1j3jk8aua" path="res://popBlock.png" id="2_mcci8"]
+[ext_resource type="AudioStream" uid="uid://c8fxahteexcdy" path="res://blockPopSound.mp3" id="3_tmqq3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
 size = Vector2(256.5, 66)
@@ -12,13 +12,14 @@ size = Vector2(254, 92)
 
 [node name="platform" type="StaticBody2D"]
 scale = Vector2(0.25, 0.25)
-script = ExtResource("1_h8ru0")
+script = ExtResource("1_o8tyn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(127, 32)
+position = Vector2(251.99998, 32)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_846sf")
-vframes = 2
+texture = ExtResource("2_mcci8")
+vframes = 6
+frame = 1
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(127.75, 31)
@@ -31,7 +32,7 @@ position = Vector2(127, 36)
 shape = SubResource("RectangleShape2D_edvyl")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_edvyl")
+stream = ExtResource("3_tmqq3")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

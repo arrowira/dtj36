@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx61s07ufxmfs"
-path="res://.godot/imported/popBlockMed.png-a08f3a34c4e71d84ea187cf5813a29d9.ctex"
+uid="uid://hoj1j3jk8aua"
+path="res://.godot/imported/popBlock.png-f71178392ca3f85a3fffd3d76003eba1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://popBlockMed.png"
-dest_files=["res://.godot/imported/popBlockMed.png-a08f3a34c4e71d84ea187cf5813a29d9.ctex"]
+source_file="res://popBlock.png"
+dest_files=["res://.godot/imported/popBlock.png-f71178392ca3f85a3fffd3d76003eba1.ctex"]
 
 [params]
 

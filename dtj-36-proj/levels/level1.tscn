@@ -1,18 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwkw5g3he2aqk"]
+[gd_scene load_steps=5 format=3 uid="uid://cwkw5g3he2aqk"]
 
-[ext_resource type="PackedScene" uid="uid://cxy4eho7vpplf" path="res://level-components/platform.tscn" id="1_jwv3a"]
+[ext_resource type="PackedScene" uid="uid://cxy4eho7vpplf" path="res://level-components/platformMed.tscn" id="1_jwv3a"]
 [ext_resource type="PackedScene" uid="uid://dh7ji8bs1kgpd" path="res://level-components/entrance.tscn" id="2_b3oru"]
 [ext_resource type="PackedScene" uid="uid://bg6eitetkox37" path="res://level-components/exit.tscn" id="3_ua5ty"]
+[ext_resource type="PackedScene" uid="uid://btnh2nqjcbqf7" path="res://level-components/platformBig.tscn" id="4_ua5ty"]
 
 [node name="Level1" type="Node2D"]
-
-[node name="platform2" parent="." instance=ExtResource("1_jwv3a")]
-position = Vector2(82, 200)
-scale = Vector2(0.38493422, 0.25933772)
-
-[node name="platform3" parent="." instance=ExtResource("1_jwv3a")]
-position = Vector2(202, 185)
-scale = Vector2(0.334031, 0.25358078)
 
 [node name="platform4" parent="." instance=ExtResource("1_jwv3a")]
 position = Vector2(291, 166)
@@ -23,3 +16,9 @@ position = Vector2(23, 211)
 [node name="Exit" parent="." instance=ExtResource("3_ua5ty")]
 position = Vector2(320, 164)
 scale = Vector2(0.24903885, 0.23308386)
+
+[node name="platform" parent="." instance=ExtResource("4_ua5ty")]
+position = Vector2(67, 202)
+
+[node name="platform2" parent="." instance=ExtResource("4_ua5ty")]
+position = Vector2(179, 180)

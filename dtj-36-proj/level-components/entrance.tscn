@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dh7ji8bs1kgpd"]
 
 [ext_resource type="Texture2D" uid="uid://bnosv2orj4ft8" path="res://level-components/door-1.png_720.png" id="1_oi137"]
-[ext_resource type="PackedScene" uid="uid://cxy4eho7vpplf" path="res://level-components/platform.tscn" id="2_1uir3"]
+[ext_resource type="PackedScene" uid="uid://cxy4eho7vpplf" path="res://level-components/platformMed.tscn" id="2_1uir3"]
 
 [node name="Entrance" type="Node2D"]
 position = Vector2(0, -1)
@@ -13,6 +13,6 @@ scale = Vector2(0.3, 0.4)
 texture = ExtResource("1_oi137")
 
 [node name="platform" parent="." instance=ExtResource("2_1uir3")]
-position = Vector2(-154.95651, 24.788715)
-scale = Vector2(1.3330342, 1.5009391)
+position = Vector2(-112, 20)
+scale = Vector2(1, 1)
 defaultState = true
