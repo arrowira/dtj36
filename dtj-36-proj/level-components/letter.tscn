@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1y6d8om4h4c2"]
+
+[ext_resource type="Script" uid="uid://b8uqskivxm2ox" path="res://level-components/letter.gd" id="1_45ipy"]
+[ext_resource type="Texture2D" uid="uid://c7io525ho0oei" path="res://luxHopperLetters.png" id="2_j2xyu"]
+[ext_resource type="AudioStream" uid="uid://c8fxahteexcdy" path="res://blockPopSound.mp3" id="3_d0cql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(64, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edvyl"]
+size = Vector2(72, 92)
+
+[node name="platform" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_45ipy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1.9073486e-06)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_j2xyu")
+hframes = 4
+vframes = 4
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-252, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(252, 36)
+shape = SubResource("RectangleShape2D_edvyl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_d0cql")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
