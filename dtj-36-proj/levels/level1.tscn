@@ -21,5 +21,5 @@ position = Vector2(291, 166)
 position = Vector2(23, 211)
 
 [node name="Exit" parent="." instance=ExtResource("3_ua5ty")]
-position = Vector2(322.99997, 163)
+position = Vector2(320, 164)
 scale = Vector2(0.24903885, 0.23308386)

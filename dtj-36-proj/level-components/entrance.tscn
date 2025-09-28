@@ -5,10 +5,11 @@
 
 [node name="Entrance" type="Node2D"]
 position = Vector2(0, -1)
-scale = Vector2(0.21296297, 0.16136375)
+scale = Vector2(0.25, 0.25)
 
 [node name="Door1_png720" type="Sprite2D" parent="."]
-position = Vector2(-2, -358)
+position = Vector2(8, -123.999985)
+scale = Vector2(0.3, 0.4)
 texture = ExtResource("1_oi137")
 
 [node name="platform" parent="." instance=ExtResource("2_1uir3")]
