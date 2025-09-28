@@ -6,13 +6,6 @@
 
 [node name="main" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(32, 26)
-
-[node name="spotLight" parent="." instance=ExtResource("2_0xm2m")]
-modulate = Color(1, 1, 1, 0.42745098)
-position = Vector2(585, 317)
-
 [node name="levelLoader" type="Node2D" parent="."]
 script = ExtResource("3_h2yge")
 
@@ -24,3 +17,10 @@ offset_top = 26.0
 offset_right = 178.0
 offset_bottom = 89.0
 text = "Level #"
+
+[node name="player" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(32, 26)
+
+[node name="spotLight" parent="." instance=ExtResource("2_0xm2m")]
+modulate = Color(1, 1, 1, 0.42745098)
+position = Vector2(585, 317)
