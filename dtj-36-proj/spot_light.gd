@@ -3,6 +3,14 @@ extends Node2D
 @export var mouseSpeed: float = 3
 
 func _ready() -> void:
+	var r = get_meta('spotRadius')
+	var ll = get_node('lightLayer')
+	ll.get_material().set_shader_parameter("innerRad", r)
+
+	var mousePosNode = get_node('mousePos')
+	var fudge = .72 # get the collision area to align with the spot
+	mousePosNode.scale = Vector2(r, r) * 400 * fudge
+
 	var obj = get_parent().find_child("Entrance")
 	print('objp ', get_parent())
 	print('obj ', obj)
@@ -14,10 +22,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var mp = get_viewport().get_mouse_position()
 	var mouse = get_node("mousePos")
-	if mouse:
-		mouse.position = mouse.position.lerp(mp, delta * mouseSpeed) 
+	if not mouse:
+		return
+	mouse.position = mouse.position.lerp(mp, delta * mouseSpeed) 
 	
 	var viewport_size = get_viewport_rect().size
-	var mouse_pos_normalized = mp / viewport_size
+	var mouse_pos_normalized = mouse.position / viewport_size
 	var ll = get_node('lightLayer')
 	ll.get_material().set_shader_parameter("mouse_position", mouse_pos_normalized)

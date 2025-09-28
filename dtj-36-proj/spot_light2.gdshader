@@ -5,6 +5,7 @@ void vertex() {
 
 uniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_nearest;
 uniform vec2 mouse_position;
+uniform float innerRad = .04;
 
 void fragment() {
 	float darkScale = .5;
