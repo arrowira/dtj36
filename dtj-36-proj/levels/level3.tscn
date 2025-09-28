@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://wx6byu7vltau"]
+
+[ext_resource type="PackedScene" uid="uid://cxy4eho7vpplf" path="res://level-components/platformMed.tscn" id="1_aaqj5"]
+[ext_resource type="PackedScene" uid="uid://dh7ji8bs1kgpd" path="res://level-components/entrance.tscn" id="2_0fm5q"]
+[ext_resource type="PackedScene" uid="uid://bg6eitetkox37" path="res://level-components/exit.tscn" id="3_cpie4"]
+[ext_resource type="PackedScene" uid="uid://btnh2nqjcbqf7" path="res://level-components/platformBig.tscn" id="4_cpie4"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="platform4" parent="." instance=ExtResource("1_aaqj5")]
+position = Vector2(302, 138)
+
+[node name="Entrance" parent="." instance=ExtResource("2_0fm5q")]
+position = Vector2(39, 164)
+
+[node name="Exit" parent="." instance=ExtResource("3_cpie4")]
+position = Vector2(331.00003, 135)
+
+[node name="platform" parent="." instance=ExtResource("4_cpie4")]
+position = Vector2(85, 160)
+
+[node name="platform2" parent="." instance=ExtResource("4_cpie4")]
+position = Vector2(181, 123)
+
+[node name="platform3" parent="." instance=ExtResource("4_cpie4")]
+position = Vector2(174, 183)
+rotation = -1.5711936

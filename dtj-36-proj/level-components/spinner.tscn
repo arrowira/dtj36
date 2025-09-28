@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://gxtn3sxxjx2f"]
+
+[ext_resource type="Script" uid="uid://cr386e34321uq" path="res://spinner.gd" id="1_1cp4b"]
+[ext_resource type="PackedScene" uid="uid://btnh2nqjcbqf7" path="res://level-components/platformBig.tscn" id="2_c7hx5"]
+
+[node name="spinner" type="Node2D"]
+script = ExtResource("1_1cp4b")
+
+[node name="platform" parent="." instance=ExtResource("2_c7hx5")]
+position = Vector2(-52, -7)
