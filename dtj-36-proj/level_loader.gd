@@ -7,6 +7,5 @@ func _ready() -> void:
 	var hud: Label = get_node("/root/main/hud/levelNumber")
 	hud.text = "Level %d" % num
 
-	#var ent = levObjs.find_child('Entrance')
-	#print(ent, ent.position)
-	
+	var ent = levObjs.find_child('Entrance')
+	get_node('/root/main/player').position = ent.position

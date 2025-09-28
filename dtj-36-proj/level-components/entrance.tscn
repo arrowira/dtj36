@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bnosv2orj4ft8" path="res://level-components/door-1.png_720.png" id="1_oi137"]
 
 [node name="Entrance" type="Node2D"]
+position = Vector2(0, -1)
+scale = Vector2(0.21296297, 0.16136375)
 
 [node name="Door1_png720" type="Sprite2D" parent="."]
 position = Vector2(-2, -358)
