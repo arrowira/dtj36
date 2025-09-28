@@ -13,6 +13,8 @@ func _ready() -> void:
 
 	var obj = get_parent().find_child("Entrance")
 	print('objp ', get_parent())
+	print('root ', get_tree().get_root())
+	print('objfindF ', get_tree().get_root().find_child("Entrance"))
 	print('obj ', obj)
 	if obj:
 		print('found entrace')

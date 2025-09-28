@@ -10,3 +10,7 @@ func _ready() -> void:
 
 	var ent = levObjs.find_child('Entrance')
 	get_node('/root/main/player').position = ent.position
+
+
+func _on_drown_timeout() -> void:
+	get_tree().change_scene_to_file("res://main.tscn")

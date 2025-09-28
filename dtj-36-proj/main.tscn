@@ -25,3 +25,7 @@ position = Vector2(32, 26)
 
 [node name="spotLight" parent="." instance=ExtResource("2_0xm2m")]
 modulate = Color(1, 1, 1, 0.42745098)
+
+[node name="drown" type="Timer" parent="."]
+
+[connection signal="timeout" from="drown" to="levelLoader" method="_on_drown_timeout"]
