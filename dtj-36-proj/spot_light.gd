@@ -2,6 +2,14 @@ extends Node2D
 
 @export var mouseSpeed: float = 3
 
+func _ready() -> void:
+	var obj = get_parent().find_child("Entrance")
+	print('objp ', get_parent())
+	print('obj ', obj)
+	if obj:
+		print('found entrace')
+		
+
 
 func _physics_process(delta: float) -> void:
 	var mp = get_viewport().get_mouse_position()
