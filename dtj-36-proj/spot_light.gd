@@ -11,10 +11,7 @@ func _ready() -> void:
 	var fudge = 1.02 # get the collision area to align with the spot
 	mousePosNode.scale = Vector2(r, r) * 250 * fudge
 
-	var obj = get_parent().find_child("Entrance")
-	print('objp ', get_parent())
-	print('root ', get_tree().get_root())
-	print('objfindF ', get_tree().get_root().find_child("Entrance"))
+	var obj = get_node('/root/main/levelLoader').get_children()[0].get_node('Entrance')
 	print('obj ', obj)
 	if obj:
 		print('found entrace')
